@@ -28,7 +28,13 @@
     </div>
     <!-- 这里是中间元素div -->
     <!-- TODO 中间元素定位 -->
-    <div class="container_div"></div>
+    <div class="container_div">
+      <!-- 第一行卡片位置，包含信息页、登录页 -->
+      <div class="hot_search_div">
+        <div class="hot_search_box"></div>
+        <div class="login_box"></div>
+      </div>
+    </div>
     <!-- 这里是底部元素div -->
     <!-- TODO 底部元素定位 -->
     <div class="footer_div">
@@ -128,8 +134,33 @@
   .container_div {
     width: 100%;
     min-height: 100vh;
-    background-color: #f7f8fa;
+    background-color: rgba(247, 248, 250, $alpha: 1);
     flex: 1 1 auto;
+    display: flex;
+    .hot_search_div {
+      width: 100%;
+      height: 300px;
+      // background-color: aqua;
+      display: flex;
+      align-items: center;
+      .hot_search_box {
+        width: 80%;
+        height: 260px;
+        margin-left: 20px;
+        background-color: rgba(255, 255, 255, $alpha: 1);
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, $alpha: 0.08),
+          0 1px 2px rgba(255, 255, 255, $alpha: 1);
+      }
+      .login_box {
+        width: 20%;
+        height: 260px;
+        margin-left: 20px;
+        margin-right: 20px;
+        // background-color: brown;
+        border-radius: 8px;
+      }
+    }
   }
   // footer固定在底部
   .footer_div {
